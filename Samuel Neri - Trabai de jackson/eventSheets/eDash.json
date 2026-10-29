@@ -1,0 +1,88 @@
+{
+	"name": "eDash",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 339506926774538,
+					"parameters": {
+						"key": 77
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 327715971889156,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Jogador2",
+					"sid": 140840923832563,
+					"parameters": {
+						"x": "Self.X + 350* 30 * dt"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 795219186044864,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 504825495850440
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 689289700968184,
+					"parameters": {
+						"key": 77
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Teclado",
+					"sid": 364763894691742,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Jogador2",
+					"sid": 859088783044944,
+					"parameters": {
+						"x": "Self.X - 350* 30 * dt"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 710254044302765,
+					"parameters": {
+						"seconds": "3",
+						"use-timescale": true
+					}
+				}
+			],
+			"sid": 315452920932121
+		}
+	],
+	"sid": 230044529385158
+}

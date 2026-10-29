@@ -1,0 +1,75 @@
+{
+	"name": "eInimigo_VaiVolta",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Vida_player3",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 765019260620942
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Inimigo",
+					"sid": 679009758439768,
+					"parameters": {
+						"object": "Jogador3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 293164564492368,
+					"parameters": {
+						"variable": "Vida_player3",
+						"value": "1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Jogador3",
+					"sid": 572260600518388,
+					"behaviorType": "Piscar",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "0.4"
+					}
+				}
+			],
+			"sid": 664553719987175
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 771762357943720,
+					"parameters": {
+						"variable": "Vida_player3",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Jogador3",
+					"sid": 412923421247651
+				}
+			],
+			"sid": 560250343827063
+		}
+	],
+	"sid": 492289266445975
+}
